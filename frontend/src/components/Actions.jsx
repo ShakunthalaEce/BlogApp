@@ -19,7 +19,7 @@ export default function Actions( {id}) {
 
   const handleDelete=async ()=>{
     console.log(id);
-    const res =await fetch("http://localhost:7000/api/blog/delete/"+id,{
+    const res =await fetch("https://blogapp-nnb7.onrender.com/api/blog/delete/"+id,{
       method:"DELETE",
       headers:{
         token:localStorage.getItem("token"),

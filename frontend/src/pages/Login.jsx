@@ -26,7 +26,7 @@ const Login = () => {
 
   const handleSubmit = async () => {
     console.log(user);
-    const res = await fetch("http://localhost:7000/api/user/login", {
+    const res = await fetch("https://blogapp-nnb7.onrender.com/api/user/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

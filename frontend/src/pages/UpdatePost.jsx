@@ -12,7 +12,7 @@ const UpdatePost=()=>{
 
     useEffect(()=>{
         const fetchSingleBlog=async()=>{
-            const res=await fetch(`http://localhost:7000/api/blog/${id}`,{
+            const res=await fetch(`https://blogapp-nnb7.onrender.com/api/blog/${id}`,{
                 method:"GET",
                 headers:{
                     token:localStorage.getItem("token")
@@ -38,7 +38,7 @@ const UpdatePost=()=>{
 
     const handleSubmit= async()=>{
         console.log(blog);
-        const res=await fetch(`http://localhost:7000/api/blog/update/${id}`,{
+        const res=await fetch(`https://blogapp-nnb7.onrender.com/api/blog/update/${id}`,{
             method:"PUT",
             headers:{
                 "Content-Type":"application/json",

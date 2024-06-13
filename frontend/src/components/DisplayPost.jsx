@@ -7,7 +7,7 @@ const DisplayPost = () => {
   const [posts,setPosts]=useState([]);
   useEffect(()=>{
     const fetchData=async () =>{
-      const res=await fetch("http://localhost:7000/api/blog/",{
+      const res=await fetch("https://blogapp-nnb7.onrender.com/api/blog/",{
         method:"GET",
         headers:{
           token:localStorage.getItem("token")

@@ -31,7 +31,7 @@ const Navbar = () => {
   // useEffect(() => {
   //   const fetchUser = async () => {
   //     console.log("Fetching data");
-  //       const res = await fetch("http://localhost:7000/api/user/auth", {
+  //       const res = await fetch("https://blogapp-nnb7.onrender.com/api/user/auth", {
   //         method: "GET",
   //         headers: {
   //           token: localStorage.getItem("token")
@@ -60,14 +60,14 @@ const Navbar = () => {
     const fetchUser = async () => {
       try {
         //console.log("Fetching data");
-        const res = await fetch("http://localhost:7000/api/user/auth", {
+        const res = await fetch("https://blogapp-nnb7.onrender.com/api/user/auth", {
   method: "GET",
   headers: {
     token: localStorage.getItem("token")
   },
 });
 
-if (res.ok) {
+if (res?.ok) {
   const data = await res.text(); // Read the response as text
   if (data) {
     const jsonData = JSON.parse(data);

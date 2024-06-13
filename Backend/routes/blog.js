@@ -37,7 +37,6 @@ BlogRouter.post("/create", getAuth, async (req, res) => {
   }
 });
 
-export default BlogRouter;
 
 BlogRouter.delete("/delete/:id", getAuth, async (req, res) => {
   try {
@@ -75,3 +74,6 @@ BlogRouter.get("/:id",getAuth,async(req,res)=>{
   .then(result=>response(res,200,result))
   .catch(err=>response(res,400,{error:err}))
 })
+
+export default BlogRouter;
+

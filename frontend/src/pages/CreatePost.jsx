@@ -18,7 +18,7 @@ const CreatePost = () => {
     }
     const handleSubmit=async ()=>{
         console.log(blog);
-        const res=await fetch("http://localhost:7000/api/blog/create",{
+        const res=await fetch("https://blogapp-nnb7.onrender.com/api/blog/create",{
         method:"POST",
         headers:{
           "Content-Type":"application/json",
